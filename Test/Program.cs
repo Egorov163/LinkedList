@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Test.Model;
 
 namespace Test
 {
@@ -6,41 +8,43 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            var list = new Model.LinkedList<int>();
-            list.Add(1);
-            list.Add(2);
-            list.Add(3);
-            list.Add(4);
-            list.Add(5);
+            //var easyStack = new EasyStack<int>();
 
-            Console.WriteLine("Добавили 5 элементов.");
-            foreach (var item in list)
-            {
-                Console.Write(item + " ");
-            }
+            //easyStack.Push(1);
+            //easyStack.Push(2);
+            //easyStack.Push(3);
 
-            list.Delete(3);
-            Console.WriteLine("\nУдалили 3 элемент.");
+            //var item = easyStack.Pop();
+            //var item2 = easyStack.Peek();
 
-            foreach (var item in list)
-            {
-                Console.Write(item + " ");
-            }
+            //Console.WriteLine(item);
+            //Console.WriteLine(item2);
 
-            list.AppendHead(10);
-            Console.WriteLine("\nДобавили 10 элемент в начало.");
+            //Stack<double> stack = new Stack<double>();
 
-            foreach (var item in list)
-            {
-                Console.Write(item + " ");
-            }
+            //var linkedStack = new LinkedStack<int>();
+            //linkedStack.Push(10);
+            //linkedStack.Push(20);
+            //linkedStack.Push(30);
+            //linkedStack.Push(40);
+            //linkedStack.Push(50);
 
-            Console.WriteLine("\nДобавили 20 элемент после 4.");
-            list.InsertAfter(4, 20);
-            foreach (var item in list)
-            {
-                Console.Write(item + " ");
-            }
+            //Console.WriteLine(linkedStack.Peek());
+            //Console.WriteLine(linkedStack.Pop());
+            //Console.WriteLine(linkedStack.Pop());
+            //Console.WriteLine(linkedStack.Peek());
+
+            var arrayStack = new ArrayStack<int>(5);
+            arrayStack.Push(10);
+            arrayStack.Push(20);
+            arrayStack.Push(30);
+            arrayStack.Push(40);
+            arrayStack.Push(50);
+
+            Console.WriteLine(arrayStack.Peek());
+            Console.WriteLine(arrayStack.Pop());
+            Console.WriteLine(arrayStack.Pop());
+            Console.WriteLine(arrayStack.Pop());;
         }
     }
 }
